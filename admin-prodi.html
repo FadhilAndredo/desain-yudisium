@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin Sistem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>body { font-family: 'Inter', sans-serif; } h1, h2, h3 { font-family: 'Poppins', sans-serif; }</style>
+</head>
+<body class="bg-gray-100 min-h-screen flex">
+
+    <aside class="w-64 bg-gray-900 text-white flex flex-col fixed h-full">
+        <div class="p-6 border-b border-gray-800">
+            <h1 class="font-bold text-xl text-white"><i class="fa-solid fa-gear mr-2"></i>SysAdmin</h1>
+        </div>
+        <nav class="flex-1 p-4 space-y-2">
+            <a href="#" class="flex items-center gap-3 px-4 py-3 bg-gray-800 rounded-lg text-white font-medium">
+                <i class="fa-solid fa-layer-group w-5"></i> Master Data
+            </a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:bg-gray-800 rounded-lg transition-colors">
+                <i class="fa-solid fa-users-gear w-5"></i> Manajemen User
+            </a>
+            <a href="#" class="flex items-center gap-3 px-4 py-3 text-gray-400 hover:bg-gray-800 rounded-lg transition-colors">
+                <i class="fa-solid fa-sliders w-5"></i> Pengaturan Sistem
+            </a>
+        </nav>
+    </aside>
+
+    <div class="flex-1 ml-64 p-8">
+        <header class="flex justify-between items-center mb-8">
+            <div>
+                <h2 class="text-2xl font-bold text-gray-900">Konfigurasi Sistem Yudisium</h2>
+                <p class="text-gray-500 text-sm">Atur jenis berkas dan hak akses pengguna.</p>
+            </div>
+            <div class="bg-white px-4 py-2 rounded shadow-sm border text-sm">
+                <span class="text-green-600 font-bold">● System Online</span>
+            </div>
+        </header>
+
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 mb-8">
+            <div class="p-6 border-b border-gray-200 flex justify-between items-center">
+                <div>
+                    <h3 class="text-lg font-bold text-gray-800">Master Persyaratan Berkas</h3>
+                    <p class="text-sm text-gray-500">Daftar dokumen yang wajib diupload mahasiswa[cite: 76].</p>
+                </div>
+                <button class="bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-medium">
+                    <i class="fa-solid fa-plus mr-2"></i> Tambah Syarat
+                </button>
+            </div>
+            <table class="w-full text-left text-sm">
+                <thead class="bg-gray-50 text-gray-600 border-b">
+                    <tr>
+                        <th class="px-6 py-3">Nama Dokumen</th>
+                        <th class="px-6 py-3">Format</th>
+                        <th class="px-6 py-3">Max Size</th>
+                        <th class="px-6 py-3">Wajib?</th>
+                        <th class="px-6 py-3 text-right">Aksi</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y">
+                    <tr>
+                        <td class="px-6 py-4 font-medium">Ijazah Terakhir (SMA/SMK)</td>
+                        <td class="px-6 py-4"><span class="bg-gray-100 px-2 py-1 rounded text-xs">.PDF</span></td>
+                        <td class="px-6 py-4">2 MB</td>
+                        <td class="px-6 py-4 text-red-600 font-bold">Ya</td>
+                        <td class="px-6 py-4 text-right">
+                            <i class="fa-solid fa-pen-to-square text-gray-400 cursor-pointer hover:text-blue-600"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="px-6 py-4 font-medium">Sertifikat TOEFL</td>
+                        <td class="px-6 py-4"><span class="bg-gray-100 px-2 py-1 rounded text-xs">.PDF</span></td>
+                        <td class="px-6 py-4">1 MB</td>
+                        <td class="px-6 py-4 text-gray-400">Tidak (Opsional)</td>
+                        <td class="px-6 py-4 text-right">
+                            <i class="fa-solid fa-pen-to-square text-gray-400 cursor-pointer hover:text-blue-600"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6">
+            <h3 class="text-lg font-bold text-gray-800 mb-4">Jadwal Pengumpulan [cite: 102]</h3>
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Tanggal Buka</label>
+                    <input type="date" class="w-full border rounded-lg px-3 py-2" value="2025-11-01">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-1">Tanggal Tutup</label>
+                    <input type="date" class="w-full border rounded-lg px-3 py-2" value="2025-11-30">
+                </div>
+            </div>
+            <div class="mt-4 text-right">
+                <button class="bg-blue-600 text-white px-6 py-2 rounded-lg text-sm">Simpan Jadwal</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
